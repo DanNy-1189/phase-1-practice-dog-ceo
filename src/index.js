@@ -54,6 +54,9 @@ function renderDogBreeds(dogBreeds) {
               const filteredList = document.createElement("li");
               filteredList.textContent = `${key}: ${value.join(', ')}`
               ul.append(filteredList);
+              filteredList.addEventListener('click', (e) => {
+                e.target.style.color = 'red';
+            });
             }); 
             return filteredBreeds;
           };
